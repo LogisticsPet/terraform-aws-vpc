@@ -18,6 +18,8 @@ module "vpc" {
   public_subnets                       = local.public_subnets
   intra_subnets                        = local.intra_subnets
   enable_nat_gateway                   = true
+  one_nat_gateway_per_az               = true
+  single_nat_gateway                   = false
   enable_dns_hostnames                 = true
   enable_flow_log                      = true
   manage_default_network_acl           = false
